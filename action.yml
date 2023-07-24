@@ -19,7 +19,7 @@ inputs:
   prLabels:
     required: false
     description: 'Labels for the PR'
-    default: 'license,legal'
+    default: ''
 runs:
   using: 'docker'
   image: 'Dockerfile'
