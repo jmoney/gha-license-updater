@@ -8,4 +8,4 @@ git checkout "${branchName}" || git checkout -b "${branchName}"
 git add $1
 git commit --message "${commitMessage}}"
 git push origin "license/${currentYear}"
-gh pr create --assignee $3 --title $4 --body ${commitMessage} --labels $6
+gh pr create --assignee $3 --title $4 --body ${commitMessage} --label $6
