@@ -1,6 +1,8 @@
 #!/bin/sh
 
 git config --global --add safe.directory /github/workspace
+git config --global user.email "noreply@github.com"
+git config --global user.name "Github Actions[bot]"
 
 currentYear=$(date +'%Y')
 branchName="license/${currentYear}"
