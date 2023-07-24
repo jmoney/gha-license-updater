@@ -1,5 +1,7 @@
 #!/bin/sh
 
+git config --global --add safe.directory /github/workspace
+
 currentYear=$(date +'%Y')
 branchName="license/${currentYear}"
 commitMessage="Update license to ${currentYear}"
