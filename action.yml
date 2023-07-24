@@ -1,0 +1,34 @@
+name: 'gha-license-updater'
+description: 'Updates the copyright year on a license'
+inputs:
+  file: 
+    description: 'License file to update'
+    required: false
+    default: 'LICENSE'
+  license-type:
+    required: false
+    description: 'License type to update'
+    default: 'Apache-2.0'
+  assignee:
+    required: true
+    description: 'Assignee for the PR'
+  prTitle:
+    required: false
+    description: 'Title for the PR'
+    default: 'Update license copyright year'
+  prLabels:
+    required: false
+    description: 'Labels for the PR'
+    default: 'license,legal'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file }}
+    - ${{ inputs.license-type }}
+    - ${{ inputs.assignee }}
+    - ${{ inputs.prTitle }}
+    - ${{ inputs.prBody }}
+    - ${{ inputs.prLabels }}
+    - ${{ inputs.token }}
+    
