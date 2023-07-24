@@ -1,4 +1,4 @@
-FROM alpine:3.12
+FROM alpine:3.16
 
 ADD main.py /app/main.py
 COPY bin /app/bin
